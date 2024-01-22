@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <style>
+            ul#menuprincipal li.destacado a#inicio {
+                color:chartreuse
+            }
+        </style>
+    </head>
+    <body>
+        <ul id="menuprincipal">
+            <li  class="destacado"> <a id="inicio">España</a></li>
+            <li> Francia </li>
+            <li> Portugal </li>
+            <li> Alemania </li>
+        </ul>
+    </body>
+</html> 
