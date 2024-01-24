@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notas y Aprobación</title>
+</head>
+<body>
+
+<script>
+    // Función para calcular la media de un array
+    function calcularMedia(array) {
+        var suma = 0;
+        for (var i = 0; i < array.length; i++) {
+            suma += array[i];
+        }
+        return suma / array.length;
+    }
+
+    // Función para determinar el estado de aprobación
+    function determinarEstado(media) {
+        return media >= 6 ? "Aprobado" : "No aprobado";
+    }
+
+    // Función para obtener un array de notas aprobadas
+    function obtenerNotasAprobadas(array) {
+        return array.filter(function(nota) {
+            return nota >= 6;
+        });
+    }
+
+    // Declarar un array con varias notas (incluyendo 2 notas que no están aprobadas)
+    var notas = [7, 8, 5, 9, 6, 4, 3];
+
+    // Calcular la media
+    var media = calcularMedia(notas);
+
+    // Determinar el estado de aprobación
+    var estado = determinarEstado(media);
+
+    // Obtener las notas aprobadas
+    var notasAprobadas = obtenerNotasAprobadas(notas);
+
+    // Mostrar todas las notas, la media y el estado en un alert
+    alert("Todas las Notas: " + notas.join(", ") +
+          "\nMedia: " + media +
+          "\nEstado: " + estado);
+</script>
+
+</body>
+</html>
+
