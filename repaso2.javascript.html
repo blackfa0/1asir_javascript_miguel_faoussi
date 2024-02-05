@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sueldos</title>
+</head>
+<body>
+
+<script>
+// Guardar en un array los sueldos de varios empleados junto a sus nombres
+// Visualizar el nombre y la media de cada empleado
+//=============================================================================//
+// FUNCIONES
+function Media (sueldos){
+    suma=0;
+    for (x = 1; x<mat_sueldos.length; x ++){
+        suma=suma+sueldos[x];
+    }
+    media=suma/(mat_sueldos.length-1);
+    return (media);    
+}
+
+function Visualizar (mat_sueldos){
+    for(const x in mat_sueldos){
+        med = Media(mat_sueldos[x]);
+        alert("La media de " + mat_sueldos[x][0] + " es " +med)
+    }
+}
+
+// PROGRAMA PRINCIPAL
+mat_sueldos = [
+            ["Luis", 1000, 1000, 1000, 1000, 1000], 
+            ["Ana", 1300, 1500, 1700, 1500, 1100], 
+            ["Raul", 1600, 1400, 1200, 1800, 1600],
+            ["Maria", 1500, 1300, 1000, 1000, 1400]
+              ]
+
+Visualizar(mat_sueldos);
+
+</script>
+
+</body>
+</html>

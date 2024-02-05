@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sueldos</title>
+</head>
+<body>
+
+<script>
+// Declarar los sueldos de un empleado y obtener la media de todos los sueldos
+// Los sueldos se deben declarar en array
+//=============================================================================//
+// FUNCIONES
+function Proceso (sueldos){
+    suma=0;
+    for (x = 1; x<sueldos.length; x ++){
+        suma=suma+sueldos[x];
+    }
+    media=suma/(sueldos.length-1);
+    return (media);    
+}
+
+function Visualizar (trabajador, media){
+    alert ("El sueldo medio de " +trabajador + " es " +media);
+}
+
+// PROGRAMA PRINCIPAL
+var sueldos = ["Luis", 1200, 1500, 1300, 1400, 1350]
+resul = Proceso (sueldos);
+Visualizar (sueldos[0], resul);
+
+</script>
+
+</body>
+</html>
