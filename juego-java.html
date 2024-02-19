@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+
+    $(document).ready(function(){
+$(".adivinar").hide();
+$(".boton_comprobar").hide();
+
+$(".continuar").click(function(){
+  $(".clave").hide();
+  $(".continuar").hide();
+
+  $(".adivinar").show();
+  $(".boton_comprobar").show();
+});
+$(".boton_comprobar").click(function() {
+    var numero_tecleado = $(".adivinar").val();
+    var clave = $(".clave").val();
+    Comprobar (numero_tecleado, clave);
+
+});
+var conta=0;
+
+function Comprobar(numero_tecleado, clave)
+{
+    conta++;
+
+    if(numero_tecleado == clave){
+        alert("ACERTASTE en "+conta+" veces");
+        $(".adivinar").hide();
+        $(".boton_comprobar").hide();
+    } else {
+        if (numero_tecleado < clave) {
+            alert ("La clave es mayor. Llevas "+conta+" intentos");
+        } else {
+            alert ("La clave es menor. Llevas "+conta+" intentos");
+        }
+        }
+        }
+  })
+
+
+  
+</script>
+</head>
+
+<body>
+    <h1>ADIVINA ADIVINANZA</h1>
+
+    <form class="form1">
+
+<input type="password" class="clave" placeholder="Introduce la clave"> 
+
+
+<input type="button" class="continuar" value="Continuar">
+
+<br><br>
+
+
+    <input type="number" class="adivinar" placeholder="Adivina la clave"> 
+
+
+<input type="button" class="boton_comprobar" value="Comprobar">
+
+    </form>
+
+</body>
+</html>
